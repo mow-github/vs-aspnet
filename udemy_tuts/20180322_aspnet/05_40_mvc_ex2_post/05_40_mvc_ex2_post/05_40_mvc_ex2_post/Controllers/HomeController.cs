@@ -28,7 +28,7 @@ namespace mvc_ex1.Controllers
       return View();
     }
 
-    public ActionResult ViewCustomer()
+    public ActionResult ViewCustomer(Customer cObj)
     {
       Customer customer = new Customer();
 
@@ -36,7 +36,19 @@ namespace mvc_ex1.Controllers
       customer.Name = "Fred";
       customer.Telephone = "123456";
 
+      if (cObj != null)
+      {
+        customer.Name = cObj.Name;
+        customer.Telephone = cObj.Telephone;
+      }
+
       return View(customer);
+    }
+
+    [HttpGet]
+    public ActionResult AddCustomer()
+    {
+      return View();
     }
 
   }
