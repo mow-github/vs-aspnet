@@ -15,7 +15,6 @@
 * udemy_tuts - courses
 
 ###### References:
-* asp.net links etc
 
 <hr>
 
