@@ -69,6 +69,12 @@ namespace _05_45_mvc_ex7_valid.Controllers
     [HttpPost]
     public ActionResult AddCustomer(Customer customer)
     {
+
+      if (!ModelState.IsValid)
+      {
+        return View(customer);
+      }
+
       customer.Id = Guid.NewGuid().ToString();
       customers.Add(customer);
       SaveCache();
