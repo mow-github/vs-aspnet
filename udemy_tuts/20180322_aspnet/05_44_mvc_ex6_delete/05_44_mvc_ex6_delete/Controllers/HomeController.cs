@@ -107,6 +107,35 @@ namespace _05_44_mvc_ex6_delete.Controllers
       }
     }
 
+    [HttpPost]
+    public ActionResult DeleteCustomer(string Id)
+    {
+      Customer customer = customers.FirstOrDefault(c => c.Id == Id);
+      if (customer == null)
+      {
+        return HttpNotFound();
+      }
+      else
+      {
+        return View(customer);
+      }
+    }
+
+    [ActionName("DeleteCustomer")]
+    public ActionResult ConfirmDeleteCustomer(string Id)
+    {
+      Customer customer = customers.FirstOrDefault(c => c.Id == Id);
+      if (customer == null)
+      {
+        return HttpNotFound();
+      }
+      else
+      {
+        customers.Remove(customer);
+        return RedirectToAction("CustomerList");
+      }
+    }
+
     public ActionResult CustomerList()
     {
 
