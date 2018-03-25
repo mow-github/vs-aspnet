@@ -26,6 +26,10 @@
           <li>@Html.ActionLink("AddCustomer", "AddCustomer", "Home")</li>
           <li>@Html.ActionLink("CustomerList", "CustomerList", "Home")</li>
         </ul>
+        @*  NOTE: Html.RenderAction is an alt way.. to Html.Partial(...  *@
+        @{
+          Html.RenderAction("Basket", "Home");
+        }
       </div>
     </div>
   </div>
