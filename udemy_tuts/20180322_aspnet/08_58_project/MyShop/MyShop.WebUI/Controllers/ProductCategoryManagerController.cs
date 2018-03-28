@@ -10,11 +10,12 @@ namespace MyShop.WebUI.Controllers
 {
   public class ProductCategoryManagerController : Controller
   {
-    ProductCategoryRepository context;
+    // add BaseEntity abstract class to Product and ProductCategory + refactor Id prop.. avoid errors here..
+    InMemoryRepository<ProductCategory> context;
 
     public ProductCategoryManagerController()
     {
-      context = new ProductCategoryRepository();
+      context = new InMemoryRepository<ProductCategory>();
     }
 
     public ActionResult Index()
