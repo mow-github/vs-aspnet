@@ -18,7 +18,9 @@ namespace MyShop.Core.Models
     public string Name { get; set; }
     public string Descprition { get; set; }
 
+    // range 0 - 1000 and remove price format, etc: 45,00
     [Range(0, 1000)]
+    [DisplayFormat(DataFormatString = "{0:N0}", ApplyFormatInEditMode = true)]
     public decimal Price { get; set; }
     public string Category { get; set; }
     public string Image { get; set; }
