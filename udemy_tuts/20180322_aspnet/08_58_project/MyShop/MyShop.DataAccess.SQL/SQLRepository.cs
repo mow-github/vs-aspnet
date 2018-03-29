@@ -37,8 +37,10 @@ namespace MyShop.DataAccess.SQL
       if( context.Entry(t).State == EntityState.Detached )
       {
         dbSet.Attach(t);
-        dbSet.Remove(t);
       }
+      //Note: corrected a bug here.. so the delete fn works
+      dbSet.Remove(t);
+
     }
 
     public T Find(string Id)
