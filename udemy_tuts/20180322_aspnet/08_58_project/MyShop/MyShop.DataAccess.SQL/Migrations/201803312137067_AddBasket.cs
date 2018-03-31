@@ -13,7 +13,7 @@ namespace MyShop.DataAccess.SQL.Migrations
                     {
                         Id = c.String(nullable: false, maxLength: 128),
                         BasketId = c.String(maxLength: 128),
-                        ProdctId = c.String(),
+                        ProductId = c.String(),
                         Quantity = c.Int(nullable: false),
                         CreatedAt = c.DateTimeOffset(nullable: false, precision: 7),
                     })
