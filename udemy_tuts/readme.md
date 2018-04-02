@@ -1,2 +1,3 @@
 ###### Projects:
 * 20180322_aspnet - Complete ASP NET MVC Web Development - Newbie to ...
+* 20180402_aspnet_c2 - The Complete ASP.NET MVC 5 Course
